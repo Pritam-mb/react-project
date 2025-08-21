@@ -165,7 +165,7 @@ function Hero() {
           />
         )}
 
-        {/* Initially hidden, GSAP will fade in */}
+        /* Initially hidden, GSAP will fade in */
         <div className="hero-content opacity-0">
           <div className="overflow-hidden">
             <h1 className="hero-title">
