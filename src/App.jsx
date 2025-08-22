@@ -7,6 +7,7 @@ import {ScrollTrigger} from 'gsap/all'
 import gsap from 'gsap'
 import locomotiveScroll from 'locomotive-scroll'
 import Messege from './scetions/Messege'
+import Flavour from './scetions/Flavour'
 // import LocomotiveScroll from "locomotive-scroll";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -22,6 +23,7 @@ function App() {
     <Navbar/>
     <Hero/>
     <Messege/>
+    <Flavour/>
     </>
   )
 }
