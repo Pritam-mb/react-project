@@ -2,30 +2,31 @@ import React from 'react'
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 function Messege() {
-    const title = "Stir up your fearless past and"
-    const subtitle = " your future with every gulp of Perfect Protein"
-    useGSAP(() => {
-        const tl1 = gsap.timeline({ delay: 0.5 });
-        tl1.to(".msg-text-scroll ", {
-              duration: 1,
+  const title = "Stir up your fearless past and"
+  const subtitle = " your future with every gulp of Perfect Protein"
+  useGSAP(() => {
+    const tl1 = gsap.timeline({ delay: 0.5 });
+    tl1.to(".msg-text-scroll ", {
+      duration: 1,
       clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
       ease: "circ.inOut",
-            scrollTrigger: {
-                trigger: ".msg-text-scroll ",
-                scroller: "body",
-                start: "top 80%",
-                end: "top 30%",
-                scrub: 1,}
-        })
+      scrollTrigger: {
+        trigger: ".msg-text-scroll ",
+        scroller: "body",
+        start: "top 80%",
+        end: "top 30%",
+        scrub: 1,
+      }
+    })
 
-        const msg = document.querySelector('.first-message').textContent;
-        const tl2 = gsap.timeline({ delay: 0.5 });
-      // var clut ="";
-      //   msg.split("").map((e)=>{
-      //     clut += `<span>${e}</span>`;
-      //    })
-          //  document.querySelector('.first-message span').innerHTML = clut;
- tl2.to(".first-message span", {
+    const msg = document.querySelector('.first-message').textContent;
+    const tl2 = gsap.timeline({ delay: 0.5 });
+    // var clut ="";
+    //   msg.split("").map((e)=>{
+    //     clut += `<span>${e}</span>`;
+    //    })
+    //  document.querySelector('.first-message span').innerHTML = clut;
+    tl2.to(".first-message span", {
       color: "white",
       stagger: 0.05,
       scrollTrigger: {
@@ -37,7 +38,7 @@ function Messege() {
       },
     }).to(".second-message span", {
       color: "white",
-       stagger: 0.05,
+      stagger: 0.05,
       scrollTrigger: {
         trigger: ".second-message",
         scroller: "body",
@@ -57,24 +58,24 @@ function Messege() {
         end: "top 30%",
         scrub: 1,
       },
-      });
-         
-          
-          
-        
-        console.log(msg);
-        
-    }, []);
-  
-    return (
-      <section className="message-content">
+    });
+
+
+
+
+    console.log(msg);
+
+  }, []);
+
+  return (
+    <section className="message-content">
       <div className="container mx-auto flex-center py-28 relative">
         <div className="w-full h-full">
           <div className="msg-wrapper">
             <h1 className="first-message"
-            style={{
-              maxWidth: "730px"
-            }}>
+              style={{
+                maxWidth: "730px"
+              }}>
               {title.split("").map((char, index) => (
                 <span key={index} className="inline-block">
                   {char === " " ? "\u00A0" : char}
@@ -93,9 +94,9 @@ function Messege() {
             </div>
 
             <h1 className="second-message"
-             style={{
-              maxWidth: "780px"
-            }}>
+              style={{
+                maxWidth: "780px"
+              }}>
               {subtitle.split("").map((char, index) => (
                 <span key={index} className="inline-block">
                   {char === " " ? "\u00A0" : char}
@@ -115,7 +116,7 @@ function Messege() {
         </div>
       </div>
     </section>
-    )
+  )
 }
 
 export default Messege
