@@ -5,13 +5,13 @@ function slider() {
     <div>
       <div className="right">
         <div className="card">
-            
+
         </div>
         <div className="card"></div>
         <div className="card"></div>
       </div>
     </div>
   )
-}
+}  
 
 export default slider
