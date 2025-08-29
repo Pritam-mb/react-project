@@ -24,6 +24,12 @@ function App() {
     <Hero/>
     <Messege/>
     <Flavour/>
+    <div
+    className='h-full w-full'
+    style={{height:"100vh",
+      width:"100vw",backgroundColor:"#f5f5f5",
+      
+    }}></div>
     </>
   )
 }

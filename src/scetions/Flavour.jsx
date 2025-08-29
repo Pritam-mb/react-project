@@ -1,6 +1,6 @@
 import React from 'react'
 import Flavourtitle from '../component/Flavourtitle'
-
+import Slider from '../component/slider'
 function Flavour() {
   return (
       <section className="flavor-section">
@@ -11,6 +11,7 @@ function Flavour() {
         </div>
         <div className="h-full">
           {/* <FlavorSlider /> */}
+          <Slider/>
         </div>
       </div>
     </section>
