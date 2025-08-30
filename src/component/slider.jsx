@@ -44,8 +44,9 @@ function Slider() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".flavor-section",
-        start: "top 30%",
-        end: "+=400px",
+        start: "top 20%",
+        end: "+=300px",
+        // end: "top 10%",
         scrub: true,
         // pin: true,
       },
