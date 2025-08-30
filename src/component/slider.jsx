@@ -44,17 +44,18 @@ function Slider() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".flavor-section",
-        start: "top 60%",
-        end: "+=500px",
+        start: "top 30%",
+        end: "+=400px",
         scrub: true,
         // pin: true,
       },
     });
     tl.to(".flavor-section", {
-      x: "-500px", // cleaner than transform: translateX
+      x: "-4700px", // cleaner than transform: translateX
       // delay: 1,
       // duration: 3,
       ease: "power1.inOut",
+      pin: true,
      
     });
   });
@@ -63,26 +64,28 @@ function Slider() {
     <div className="slider-wrapper">
       <div
         className="flavors"
-       style={{border:"1px solid red"}}
+      //  style={{border:"1px solid red"}}
       >
         
         {flavorlists.map((flavor) => (
           <div
             key={flavor.name}
-            className={`relative z-30 lg:w-[50vw] w-96 lg:h-[70vh] md:w-[90vw] md:h-[50vh] h-80 flex-none ${flavor.rotation}`}
+            className={`relative z-30 lg:w-[50vw] w-96 lg:h-[70vh] md:w-[90vw] md:h-[50vh] h-80 flex-none ${flavor.rotation}
+             group cursor-pointer transition-transform duration-500 ease-out hover:scale-105 hover:z-50`}
           >
             <img
-              src={`/images/brown-bg.svg`}
+              src={`/images/${flavor.color}-bg.svg`}
               className="absolute bottom-0"
               alt=""
             />
+            {/* splink\public\images\blue-drink.webp */}
             <img
-              src={`/images/brown-drink (1).webp`}
+              src={`/images/${flavor.color}-drink.webp`}
               className="drinks"
               alt=""
             />
             <img
-              src={`images/brown-elements.webp`}
+              src={`images/${flavor.color}-elements.webp`}
               className="absolute"
               alt=""
             />
@@ -101,4 +104,4 @@ function Slider() {
   );
 }
 
-export default Slider;
+export default Slider;  
