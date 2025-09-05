@@ -9,6 +9,7 @@ import locomotiveScroll from 'locomotive-scroll'
 import Messege from './scetions/Messege'
 import Flavour from './scetions/Flavour'
 import Neutrition from './scetions/Neutrition'
+import Benifit from './scetions/benifit'
 // import LocomotiveScroll from "locomotive-scroll";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -26,6 +27,7 @@ function App() {
     <Messege/>
     <Flavour/>
     <Neutrition/>
+    <Benifit/>
     <div
     className='h-full w-full'
     style={{height:"100vh",

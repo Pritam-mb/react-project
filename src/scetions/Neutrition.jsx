@@ -3,6 +3,49 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText } from "gsap/all";
 function Neutrition() {
+
+const flavorlists = [
+  {
+    name: "Chocolate Milk",
+    color: "brown",
+    rotation: "md:rotate-[-8deg] rotate-0",
+  },
+  {
+    name: "Stawberry Milk",
+    color: "red",
+    rotation: "md:rotate-[8deg] rotate-0",
+  },
+  {
+    name: "Cookies & Cream",
+    color: "blue",
+    rotation: "md:rotate-[-8deg] rotate-0",
+  },
+  {
+    name: "Peanut Butter Chocolate",
+    color: "orange",
+    rotation: "md:rotate-[8deg] rotate-0",
+  },
+  {
+    name: "Vanilla Milkshake",
+    color: "white",
+    rotation: "md:rotate-[-8deg] rotate-0",
+  },
+  {
+    name: "Max Chocolate Milk",
+    color: "black",
+    rotation: "md:rotate-[8deg] rotate-0",
+  },
+];
+
+const nutrientLists = [
+  { label: "Potassium", amount: "245mg" },
+  { label: "Calcium", amount: "500mg" },
+  { label: "Vitamin A", amount: "176mcg" },
+  { label: "Vitamin D", amount: "5mcg" },
+  { label: "Iron", amount: "1mg" },
+];
+//  const [lists, setLists] = useState(nutrientLists);
+
 //       useGSAP(() => {
 //     const firstTextSplit = SplitText.create(".first-text-split h1", {
 //       type: "chars",
@@ -130,7 +173,25 @@ ease: "circ.out",
                 </h2>
             </div>
         </div>
-    
+        <div className="nutrition-box">
+          <div className="list-wrapper">
+            {nutrientLists.map((nutrient, index) => (
+              <div key={index} className="relative flex-1 col-center">
+                <div>
+                  <p className="md:text-lg font-paragraph">{nutrient.label}</p>
+                  <p className="font-paragraph text-sm mt-2">up to</p>
+                  <p className="text-2xl md:text-4xl tracking-tighter font-bold">
+                    {nutrient.amount}
+                  </p>
+                </div>
+
+                {index !== nutrientLists.length - 1 && (
+                  <div className="spacer-border" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
             </div>
 )
            
