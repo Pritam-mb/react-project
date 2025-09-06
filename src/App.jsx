@@ -10,6 +10,8 @@ import Messege from './scetions/Messege'
 import Flavour from './scetions/Flavour'
 import Neutrition from './scetions/Neutrition'
 import Benifit from './scetions/benifit'
+import Testimonial from './scetions/Testimonial'
+import FooterSection from './scetions/FooterSection'
 // import LocomotiveScroll from "locomotive-scroll";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -27,13 +29,13 @@ function App() {
     <Messege/>
     <Flavour/>
     <Neutrition/>
+    <div>
+
     <Benifit/>
-    <div
-    className='h-full w-full'
-    style={{height:"100vh",
-      width:"100vw",backgroundColor:"#f5f5f5",
-      
-    }}></div>
+    <Testimonial/>
+    </div>
+    <FooterSection/>
+ 
     </>
   )
 }

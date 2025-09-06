@@ -1,6 +1,7 @@
 import React from 'react'
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import VideoPinSection from '../component/VideoPinSection';
 function benifit() {
   const list = [
     "Shelf stable", "Protein + Caffeine", "Infinitely recyclable"
@@ -60,7 +61,7 @@ function benifit() {
           clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
          
         }}
-             className="box-1 w-95 h-22 border border-[#222123]-[5px] bg-[#c88e64] rotate-3 z-10 relative 
+             className="box-1 w-100 h-29 border-[.8vw] border-[#222123] bg-[#c88e64] rotate-3 z-10 relative 
                 flex items-center justify-center text-center p-5">
               <h2 className="text-7xl text-[#faeade]">
                 SHELF STABLE
@@ -70,7 +71,7 @@ function benifit() {
           clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
          
         }}
-            className=" box-2 w-130 h-22 border  bg-[#faeade]   rotate-1 z-5
+            className=" box-2 w-130 h-29 border  bg-[#faeade]   rotate-1 z-5
                 flex items-center justify-center text-center">
               <h2 className="text-7xl text-[#222123]">
                 PROTEIN + CAFFEINE
@@ -79,7 +80,7 @@ function benifit() {
             <div style={{
           clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
          
-        }} className="box-3 w-150 h-23 border  bg-[#7F3B2D] rotate--1 z-10 relative 
+        }} className="box-3 w-150 h-30 border-[.8vw]  border-[#222123]  bg-[#7F3B2D] rotate-3 z-10 relative 
                 flex items-center justify-center text-center">
               <h2 className="text-7xl text-[#c88e64]">
                 INFINITELY RECYCLABLE
@@ -88,7 +89,7 @@ function benifit() {
             <div style={{
           clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
          
-        }} className="box-4 w-100 h-22 border border-yellow-500 bg-[#FED775] rotate-3 z-10 relative 
+        }} className="box-4 w-100 h-28 border border-yellow-500 bg-[#FED775] rotate--100 z-5 relative 
                 flex items-center justify-center text-center">
               <h2 className="text-7xl text-[#2E2D2F]">
                 LACTOSE FREE
@@ -99,6 +100,10 @@ function benifit() {
 
           </div>
         </div>
+      </div>
+      
+        <div className="relative overlay-box ">
+        <VideoPinSection />
       </div>
     </section>
   )

@@ -132,7 +132,7 @@ function Hero() {
        
        
         end: "80% top",
-        markers: true,
+        // markers: true,
           scrub: true,
           // pin: true,
       }
