@@ -9,7 +9,7 @@ import locomotiveScroll from 'locomotive-scroll'
 import Messege from './scetions/Messege'
 import Flavour from './scetions/Flavour'
 import Neutrition from './scetions/Neutrition'
-import Benifit from './scetions/benifit'
+import Benifit from './scetions/Benifit'
 import Testimonial from './scetions/Testimonial'
 import FooterSection from './scetions/FooterSection'
 // import LocomotiveScroll from "locomotive-scroll";
